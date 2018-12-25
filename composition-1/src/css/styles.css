@@ -1,0 +1,56 @@
+@import url(css-reset.css);
+/****************/
+/* Local Styles */
+/****************/
+
+:root {
+  --masthead-background-color: hsl(4, 100%, 50%);
+  --highlight-color: hsl(150, 50%, 100%);
+  --button-main-color: hsl(125, 100%, 35%);
+}
+header {
+  background-color: var(--masthead-background-color);
+  padding: 20px;
+}
+header h1 {
+  color: var(--highlight-color);
+  margin: 0;
+  font-size: 1.5rem
+}
+
+section {
+  padding: 2rem;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.counter-btn {
+  background-color: var(--button-main-color);
+  border: solid 1px var(--button-main-color);
+  color: var(--highlight-color);
+  cursor: pointer;
+  transition: all .25s ease-out;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.counter-btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--button-main-color);
+}
+
+strong {
+  color: var(--button-main-color);
+}
+strong.parent {
+  color: var(--masthead-background-color)
+}
+.child-container {
+  border: solid 2px var(--button-main-color);
+  padding: 10px;
+}
+.parent-program {
+  
+  border: solid 2px var(--masthead-background-color);
+  padding: 10px;
+}
