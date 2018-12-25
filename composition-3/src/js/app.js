@@ -10,7 +10,7 @@ function maxValueReached(state) {
 
 // Define a counter program.
 // This will be consumed by another program.
-// For that reason the view dos not render
+// For that reason the view does not render
 // the component, it just returns it
 const counter = {
   // State is an integer to count
