@@ -41,6 +41,8 @@ const counterMessage = message => ({
 
 // Capture the state and effect of program to be used by its parent:
 const [counterState] = counter.init()
+
+// Create inti function for parent program using child program's state:
 const init = () => [{ counterState }]
 
 
