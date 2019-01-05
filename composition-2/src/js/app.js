@@ -1,4 +1,5 @@
 import { h, render, run } from '@composi/core'
+import { mergeObjects } from '@composi/merge-objects'
 
 // Define a counter program.
 // This will be consumed by another program.
@@ -63,7 +64,7 @@ const CounterProgram = {
   update(state, message) {
     if (message.type === 'counterMessage') {
       const [newCounterState] = counter.update(state.counterState, message.data)
-      const newState = { ...state, counterState: newCounterState }
+      const newState = mergeObjects(state, {counterState: newCounterState })
       return [newState]
     }
   }

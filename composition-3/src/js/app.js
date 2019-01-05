@@ -1,4 +1,5 @@
 import { h, render, run } from '@composi/core'
+import { mergeObjects } from '@composi/merge-objects'
 
 const MAX_VALUE = 5
 
@@ -72,10 +73,10 @@ const CounterProgram = {
   update(state, message) {
     if (message.type === 'counterMessage') {
       const [newCounterState] = counter.update(state.counterState, message.data)
-      let newState = { ...state, counterState: newCounterState }
+      let newState = mergeObjects(state, { counterState: newCounterState})
       if (maxValueReached(newCounterState)) {
         alert(`You've reached the maximum allowed value for this counter, which is ${MAX_VALUE}.`)
-        newState = { ...state, counterState: newCounterState }
+        newState = mergeObjects(state, { counterState: newCounterState})
         // State is too high, so return original state:
         return [state]
       } else {
