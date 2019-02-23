@@ -30,7 +30,8 @@ const counter = {
     )
   },
   update(state, message) {
-    return [state + 1] // Increment the state
+    // Increment the state
+    return [state + 1]
   }
 }
 
@@ -40,10 +41,10 @@ const counterMessage = message => ({
   data: message
 })
 
-// Capture the state and effect of program to be used by its parent:
+// Capture the state of program to be used by its parent:
 const [counterState] = counter.init()
 
-// Create inti function for parent program using child program's state:
+// Create init function for parent program using child program's state:
 const init = () => [{ counterState }]
 
 
@@ -76,10 +77,10 @@ const CounterProgram = {
       let newState = mergeObjects(state, { counterState: newCounterState})
       if (maxValueReached(newCounterState)) {
         alert(`You've reached the maximum allowed value for this counter, which is ${MAX_VALUE}.`)
-        newState = mergeObjects(state, { counterState: newCounterState})
-        // State is too high, so return original state:
+        // New state is too high, so return original state:
         return [state]
       } else {
+        // Return incremented state.
         return [newState]
       }
     }
