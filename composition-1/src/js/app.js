@@ -11,7 +11,7 @@ const CounterProgram = {
   init,
 
   view(state, send) {
-    render(<ParentView {...{ state, send }} />, 'section')
+    render(<ParentView {...{ state, send }} />, '.parent-program')
   },
 
   // Here we capture the state of the child through its update method.

@@ -15,7 +15,7 @@ const CounterProgram = {
   view(state, send) {
     render(
       <ParentComponent {...{ state, send, counter, init }}/>
-      , 'section'
+      , '.parent-program'
     )
   },
 

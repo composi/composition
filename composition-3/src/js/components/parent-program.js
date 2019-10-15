@@ -27,7 +27,7 @@ export const CounterProgram = {
           counter.view(state.counterState, message => send(counterMessage(message)))
         }
       </div>
-      , 'section'
+      , '.parent-program'
     )
   },
 
