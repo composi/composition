@@ -19,8 +19,8 @@ const CounterProgram = {
   // the parent and child both get re-rendered.
   update(state, message) {
     if (message.type === 'counterMessage') {
-      const [newCounterState] = counter.update(state)
-      return [newCounterState]
+      const newCounterState = counter.update(state)
+      return newCounterState
     }
   }
 }

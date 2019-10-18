@@ -1,5 +1,4 @@
 import { h, render, run } from '@composi/core'
-import { mergeObjects } from '@composi/merge-objects'
 import { Title } from './components/title'
 import { counter } from './components/child-program'
 import { counterMessage, init } from './effects/child-effects'
@@ -22,11 +21,11 @@ const CounterProgram = {
   // Here we capture the update details of the child.
   // We need to do that here so that when we return,
   // the parent and child both get re-rendered.
-  update(state, message) {
+  update(state, message, send) {
     if (message.type === 'counterMessage') {
-      const [newCounterState] = counter.update(state.counterState, message.data)
-      const newState = mergeObjects(state, {counterState: newCounterState })
-      return [newState]
+      const newCounterState = counter.update(state, message)
+      // const newState = mergeObjects(state, {counterState: newCounterState })
+      return newCounterState
     }
   }
 }

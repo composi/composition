@@ -8,7 +8,7 @@ import { Counter } from './counter-component'
 export const counter = {
   init() {
     // Initial value for child counter:
-    return [66]
+    return 66
   },
   view(state, send) {
     // No need to render this component.
@@ -19,6 +19,6 @@ export const counter = {
   },
   update(state, msg) {
     // Increment the state
-    return [state + 1]
+    return state + 1
   }
 }

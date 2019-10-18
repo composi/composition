@@ -6,7 +6,7 @@ export const counterMessage = message => ({
 })
 
 // Set the initial state for program to be used by its parent:
-const [counterState] = [145]
+const counterState = 145
 
 // Define init function for parent program, capturing child program's state:
-export const init = () => [{ counterState }]
+export const init = () => counterState
