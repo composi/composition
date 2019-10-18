@@ -9,8 +9,6 @@ const counterState = counter.init()
 
 // Create init function for parent program using child program's state:
 const init = () => counter.init()
-console.log('This is child init:')
-console.log(init())
 
 
 export const CounterProgram = {
@@ -19,8 +17,6 @@ export const CounterProgram = {
 
   // Here the view consumes the child program's view
   view(state, send) {
-    console.log(`state is:`)
-    console.log(state)
     render(
       <div class='parent-program'>
         <h2>This is the parent program.</h2>
@@ -41,8 +37,6 @@ export const CounterProgram = {
   update(state, message, send) {
     if (message.type === 'counterMessage') {
       const newCounterState = counter.update(state, message.data, send)
-      console.log(`newCounterState:`)
-      console.log(newCounterState)
       // let newState = mergeObjects(state, { counterState: newCounterState })
       if (maxValueReached(newCounterState)) {
         alert(`You've reached the maximum allowed value for this counter, which is ${MAX_VALUE}.`)
