@@ -2,12 +2,17 @@ import { h } from '@composi/core'
 import { counterMessage } from '../effects/child-effects'
 import { counter } from './child-program'
 
-// Define parent view, which also consumes child counter program.
-// Here we do one important thing. We hijack the send function
-// of the child component, replacing it with `counterMessage`.
-// That way when the user clicks the counter,
-// it executes `counterMesage` instead of send,
-// which gets intercepted by the parent.
+/**
+ * Define parent view, which also consumes child counter program.
+ * Here we do one important thing. We hijack the send function
+ * of the child component, replacing it with `counterMessage`.
+ * That way when the user clicks the counter,
+ * it executes `counterMesage` instead of send,
+ * which gets intercepted by the parent.
+ * @typedef {import('../types').State} State
+ * @typedef {import('../types').Send} Send
+ * @param {{state: State, send: Send}} props
+ */
 export function ParentView({ state, send }) {
   return (
     <div class='parent-program'>

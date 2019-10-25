@@ -1,6 +1,12 @@
 import { h } from '@composi/core'
 import { counterMessage } from '../effects/child-effects'
 
+/**
+ * @typedef {import('../types').State} State
+ * @typedef {import('../types').Send} Send
+ * @typedef {import('../types').Program} Program
+ * @param {{state: State, send: Send, counter: Program}} props
+ */
 export function ParentComponent({ state, send, counter }) {
   return (
     <div class='parent-program'>

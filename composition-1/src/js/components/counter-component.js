@@ -1,6 +1,10 @@
 import { h } from '@composi/core'
 
-
+/**
+ * @typedef {import('../types').State} State
+ * @typedef {import('../types').Send} Send
+ * @param {{state: State, send: Send}} props
+ */
 export function Counter({state, send}) {
   return (
     <div class='child-container'>
