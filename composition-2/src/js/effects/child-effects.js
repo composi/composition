@@ -4,7 +4,7 @@
 
 /**
  * Counter message to use.
- * @param {{type: string, data: import('../types').Message}} message
+ * @param {{type: string, data?: import('../types').Message}} message
  */
 export const counterMessage = message => ({
   type: 'counterMessage',

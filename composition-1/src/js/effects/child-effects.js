@@ -8,7 +8,7 @@ import { counter } from '../components/child-program'
  * Message to send from view.
  * We'll use this to replace the default send function
  * implemented above in the counter child program.
- * @param {{type: string, data: import('../types').Message}} message
+ * @param {{type: string, data?: import('../types').Message}} message
  */
 export const counterMessage = message => ({
   type: 'counterMessage',
