@@ -6,7 +6,10 @@ export function maxValueReached(state) {
   return state > MAX_VALUE
 }
 
-// Effect
+/**
+ * Effect
+ * @param {import('./types').Message} message
+ */
 export const counterMessage = message => ({
   type: 'counterMessage',
   data: message
