@@ -1,5 +1,4 @@
 import { h, render } from '@composi/core'
-import { mergeObjects } from '@composi/merge-objects'
 import { counter } from './child-program'
 import { maxValueReached, counterMessage, MAX_VALUE } from '../effects'
 
