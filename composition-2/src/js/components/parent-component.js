@@ -6,6 +6,7 @@ import { counterMessage } from '../effects/child-effects'
  * @typedef {import('../types').Send} Send
  * @typedef {import('../types').Program} Program
  * @param {{state: State, send: Send, counter: Program}} props
+ * @returns {import('../types').VNode} VNode
  */
 export function ParentComponent({ state, send, counter }) {
   return (

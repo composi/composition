@@ -12,6 +12,7 @@ import { counter } from './child-program'
  * @typedef {import('../types').State} State
  * @typedef {import('../types').Send} Send
  * @param {{state: State, send: Send}} props
+ * @returns {import('../types').VNode} VNode
  */
 export function ParentView({ state, send }) {
   return (
