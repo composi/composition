@@ -13,5 +13,6 @@ export function noop() { }
  */
 
 /**
+ * Application state.
  * @typedef {number} State
  */
