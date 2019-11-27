@@ -1,5 +1,5 @@
-import { h } from '@composi/core'
-import { counterMessage } from '../effects/child-effects'
+import {h} from '@composi/core'
+import {counterMessage} from '../effects/child-effects'
 
 /**
  * @typedef {import('../types').State} State
@@ -8,7 +8,7 @@ import { counterMessage } from '../effects/child-effects'
  * @param {{state: State, send: Send, counter: Program}} props
  * @returns {import('../types').VNode} VNode
  */
-export function ParentComponent({ state, send, counter }) {
+export function ParentComponent({state, send, counter}) {
   return (
     <div class='parent-program'>
       <h2>This is the parent program.</h2>

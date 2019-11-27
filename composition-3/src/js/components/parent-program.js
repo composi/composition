@@ -1,6 +1,6 @@
-import { h, render } from '@composi/core'
-import { counter } from './child-program'
-import { maxValueReached, counterMessage, MAX_VALUE } from '../effects'
+import {h, render} from '@composi/core'
+import {counter} from './child-program'
+import {maxValueReached, counterMessage, MAX_VALUE} from '../effects'
 
 /**
  * @typedef {import('../types').State} State

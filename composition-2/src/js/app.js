@@ -1,10 +1,10 @@
-import { h, render, run } from '@composi/core'
-import { Title } from './components/title'
-import { counter } from './components/child-program'
-import { counterMessage, init } from './effects/child-effects'
-import { ParentComponent } from './components/parent-component'
+import {h, render, run} from '@composi/core'
+import {Title} from './components/title'
+import {counter} from './components/child-program'
+import {counterMessage, init} from './effects/child-effects'
+import {ParentComponent} from './components/parent-component'
 
-render(<Title message='Parent to Child Communication'/>, 'header')
+render(<Title message='Parent to Child Communication' />, 'header')
 
 /**
  * @typedef {import('./types').State} State
@@ -26,7 +26,7 @@ const CounterProgram = {
    */
   view(state, send) {
     render(
-      <ParentComponent {...{ state, send, counter, init }}/>
+      <ParentComponent {...{state, send, counter, init}} />
       , '.parent-program'
     )
   },

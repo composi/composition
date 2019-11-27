@@ -1,6 +1,6 @@
-import { h } from '@composi/core'
-import { counterMessage } from '../effects/child-effects'
-import { counter } from './child-program'
+import {h} from '@composi/core'
+import {counterMessage} from '../effects/child-effects'
+import {counter} from './child-program'
 
 /**
  * Define parent view, which also consumes child counter program.
@@ -14,7 +14,7 @@ import { counter } from './child-program'
  * @param {{state: State, send: Send}} props
  * @returns {import('../types').VNode} VNode
  */
-export function ParentView({ state, send }) {
+export function ParentView({state, send}) {
   return (
     <div class='parent-program'>
       <h2>This is the parent program.</h2>

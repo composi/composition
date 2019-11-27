@@ -1,4 +1,4 @@
-import { h } from '@composi/core'
+import {h} from '@composi/core'
 
 /**
  * @typedef {import('../types').State} State
@@ -6,7 +6,7 @@ import { h } from '@composi/core'
  * @param {{state: State, send: Send}} props
  * @returns {import('../types').VNode} VNode
  */
-export function Counter({ state, send }) {
+export function Counter({state, send}) {
   return (
     <div class='child-container'>
       <h4>Child program</h4>

@@ -1,5 +1,5 @@
-import { h } from '@composi/core'
-import { Counter } from './counter-component'
+import {h} from '@composi/core'
+import {Counter} from './counter-component'
 
 /**
  * @typedef {import('../types').State} State
@@ -28,7 +28,7 @@ export const counter = {
     // No need to render this component.
     // Just return it for the parent to render.
     return (
-      <Counter {...{state, send}}/>
+      <Counter {...{state, send}} />
     )
   },
   /**
