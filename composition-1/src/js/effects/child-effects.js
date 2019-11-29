@@ -2,13 +2,15 @@ import { counter } from '../components/child-program'
 
 /**
  * @typedef {import('../types').State} State
+ * @typedef {import('../types').Message} Message
  */
 
 /**
  * Message to send from view.
  * We'll use this to replace the default send function
  * implemented above in the counter child program.
- * @param {{type: string, data?: import('../types').Message}} message
+ * @param {{type: string, data?: any}} message
+ * @returns {Message} Message
  */
 export const counterMessage = message => ({
   type: 'counterMessage',

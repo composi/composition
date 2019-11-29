@@ -22,7 +22,7 @@ export function ParentView({state, send}) {
       {
         // Use child program's view.
         // Supply it with hijacked message to update its state.
-        counter.view(state, message => send(counterMessage(message)))
+        counter.view(state, message => send(counterMessage(/** @type {*} */(message))))
       }
     </div>
   )
